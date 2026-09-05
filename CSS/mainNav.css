@@ -40,6 +40,8 @@ img{
    
 }
 
+
+
 .wrapper.blur{
     filter:blur(4px);
     transition: filter 1s ease;
@@ -153,7 +155,7 @@ main{
 .mainPortSection{
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 125px;
     align-items: center;
     font-family: sans-serif;
     margin-bottom: 100px;
@@ -169,6 +171,13 @@ main{
     color: transparent;
     
 }
+
+.mainPortSection .flexRowFirst{
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+}
+
 
 
 .mainPortSection .gridDisplaySubSections{
@@ -212,9 +221,21 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    background: linear-gradient(270deg, white, rgb(168, 150, 150));
+    background-clip: text;
+    color: transparent;
+    
     
     
 }
+
+.layoutContainer > :nth-child(2) > :first-child{
+    color: black;
+}
+
+
+
+
 
 
 
@@ -264,14 +285,7 @@ main{
 
 
 
-.mainPortSection .aboutMeTitle{
-    color: white;
-}
 
-.mainPortSection .nameInformation{
-    color: white;
-
-}
 
 
 
