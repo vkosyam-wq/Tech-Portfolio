@@ -30,38 +30,41 @@ headerButton.addEventListener("click", function(){
 
 
     
-    document.addEventListener("click", function(event){
-        if(!headerPopover.contains(event.target))
-        {
-            headerButton.classList.remove("open");
-            headerPopover.classList.remove("open");
-            wrapperGet.classList.remove("blur");
-            headerButton.style.pointerEvents = "all";
-            for(const navButton of arrayOfButtons) navButton.style.pointerEvents = "all";
-            logoButton.style.pointerEvents ="all";
-            document.documentElement.style.overflowY = "scroll";
-            document.body.style.overflowY = "scroll";  
-
-
-            
-            
-
-        }
-    })
-
-    window.addEventListener("resize", function(){
-        if(window.innerHeight < height)
-        {
-            arrayOfPopover.forEach(element => {
-                element.classList.remove("open");
-            });
-            wrapperGet.classList.remove("blur");
-            headerButton.style.pointerEvents = "all";
-            for(const button of arrayOfButtons) button.style.pointerEvents = "all";
-        }
-        
-    })
     
+})
+
+document.addEventListener("click", function(event){
+
+    if(face.classList.contains("open")) return;
+
+    if(!headerPopover.contains(event.target))
+    {
+        headerButton.classList.remove("open");
+        headerPopover.classList.remove("open");
+        wrapperGet.classList.remove("blur");
+        headerButton.style.pointerEvents = "all";
+        for(const navButton of arrayOfButtons) navButton.style.pointerEvents = "all";
+        logoButton.style.pointerEvents ="all";
+        document.documentElement.style.overflowY = "scroll";
+        document.body.style.overflowY = "scroll";  
+
+
+        
+        
+
+    }
+})
+
+window.addEventListener("resize", function(){
+    if(window.innerHeight < height)
+    {
+        arrayOfPopover.forEach(element => {
+            element.classList.remove("open");
+        });
+        wrapperGet.classList.remove("blur");
+        headerButton.style.pointerEvents = "all";
+        for(const button of arrayOfButtons) button.style.pointerEvents = "all";
+    }
     
 })
 
@@ -125,3 +128,11 @@ for(let i = 0; i < arrayOfButtons.length; i++)
             
     
 }
+
+const face = document.getElementById("faceImage");
+
+face.addEventListener("click", function(){
+    face.classList.toggle("open");
+})
+
+
