@@ -1,1 +1,1 @@
-This is my tech-portfolio.
+Welcome. This is a constantly evolving mock-portfolio site, where I practice project-based learning on languages such as HTML & CSS, JavaScript, and git. Thank you for visiting.
